@@ -8,10 +8,10 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/reynaldipane/test-ijah/appcontext"
-	helper "github.com/reynaldipane/test-ijah/helpers"
-	orders "github.com/reynaldipane/test-ijah/order"
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	"github.com/reynaldipane/toko-ijah/appcontext"
+	helper "github.com/reynaldipane/toko-ijah/helpers"
+	orders "github.com/reynaldipane/toko-ijah/order"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 var reportService ServiceInterface

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	orders "github.com/reynaldipane/test-ijah/order"
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	orders "github.com/reynaldipane/toko-ijah/order"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 /*ServiceInterface wraps the report service ability

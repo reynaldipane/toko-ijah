@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	valid "github.com/asaskevich/govalidator"
-	"github.com/reynaldipane/test-ijah/appcontext"
-	helper "github.com/reynaldipane/test-ijah/helpers"
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	"github.com/reynaldipane/toko-ijah/appcontext"
+	helper "github.com/reynaldipane/toko-ijah/helpers"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 var orderService ServiceInterface

@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 
-	"github.com/reynaldipane/test-ijah/appcontext"
+	"github.com/reynaldipane/toko-ijah/appcontext"
 
-	helper "github.com/reynaldipane/test-ijah/helpers"
+	helper "github.com/reynaldipane/toko-ijah/helpers"
 
 	valid "github.com/asaskevich/govalidator"
 )

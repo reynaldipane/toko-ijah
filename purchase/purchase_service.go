@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strconv"
 
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
-	purchasehistory "github.com/reynaldipane/test-ijah/purchase_history"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
+	purchasehistory "github.com/reynaldipane/toko-ijah/purchase_history"
 )
 
 type serviceInterface interface {

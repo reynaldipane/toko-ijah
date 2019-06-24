@@ -3,8 +3,8 @@ package report
 import (
 	"time"
 
-	"github.com/reynaldipane/test-ijah/product"
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	"github.com/reynaldipane/toko-ijah/product"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 type productStock struct {

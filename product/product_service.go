@@ -1,7 +1,7 @@
 package product
 
 import (
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 type serviceInterface interface {

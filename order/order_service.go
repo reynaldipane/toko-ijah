@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	productstock "github.com/reynaldipane/test-ijah/product_stock"
+	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 )
 
 /*ServiceInterface wraps the order service ability
