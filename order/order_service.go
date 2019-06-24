@@ -41,5 +41,6 @@ func (service *Service) createOrder(order Order) (Order, error) {
 	}
 
 	order.TotalPrice = order.NumberSold * order.SellPrice
+	order.ProductStockID = productStockData.ID
 	return service.Repo.createOrder(order)
 }

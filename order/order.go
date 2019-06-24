@@ -12,7 +12,7 @@ type Order struct {
 	TotalPrice     int        `gorm:"not null" json:"total_price" valid:"numeric"`
 	Notes          string     `gorm:"type:varchar(100)" json:"receipt_number" valid:"-"`
 	ProductID      uint       `json:"product_id" valid:"numeric,required" sql:"type:uint REFERENCES products(id)"`
-	ProductStockID uint       `json:"product_stock_id" valid:"numeric,required" sql:"type:uint REFERENCES product_stocks(id)"`
+	ProductStockID uint       `json:"product_stock_id" valid:"-" sql:"type:uint REFERENCES product_stocks(id)"`
 	CreatedAt      time.Time  `json:"created_at" valid:"-"`
 	UpdatedAt      time.Time  `json:"updated_at" valid:"-"`
 	DeletedAt      *time.Time `json:"deleted_at" valid:"-"`

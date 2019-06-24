@@ -25,7 +25,6 @@ func (service *Service) createProduct(product Product) (Product, error) {
 	_, err = service.productStockService.CreateProductStock(productstock.ProductStock{
 		ProductID:       createdProduct.ID,
 		Stock:           0,
-		TotalOrdered:    0,
 		AverageBuyPrice: 0.0,
 	})
 

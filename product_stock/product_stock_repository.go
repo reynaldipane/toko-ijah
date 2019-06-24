@@ -42,7 +42,6 @@ func (repo *productStockRepository) updateProductStock(productID string, updateP
 	}
 
 	productStock.Stock = updateProductStockData.Stock
-	productStock.TotalOrdered = updateProductStockData.TotalOrdered
 	productStock.AverageBuyPrice = updateProductStockData.AverageBuyPrice
 
 	updateProductStockResult := repo.DB.Save(&productStock)

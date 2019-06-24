@@ -65,8 +65,7 @@ func (service *Service) updateNumberReceivedByID(id string, updatePurchaseData P
 		return updatePurchaseData, err
 	}
 
-	isInvalidNumberReceived := (oldPurchaseData.NumberReceived+updatePurchaseData.NumberReceived > oldPurchaseData.NumberOrdered) ||
-		(oldPurchaseData.NumberReceived <= updatePurchaseData.NumberReceived)
+	isInvalidNumberReceived := (oldPurchaseData.NumberReceived+updatePurchaseData.NumberReceived > oldPurchaseData.NumberOrdered)
 
 	if isInvalidNumberReceived {
 		return updatePurchaseData, errors.New("Incorrect update number received, check again")
@@ -102,7 +101,7 @@ func (service *Service) updateNumberReceivedByID(id string, updatePurchaseData P
 	return updatedPurchaseData, nil
 }
 
-func calculateProductStockDetails(purchases []Purchase) (float64, int, int) {
+func calculateProductStockDetails(purchases []Purchase) (float64, int) {
 	sumTotalPrice := 0
 	sumNumberReceived := 0
 	sumNumberOrdered := 0
@@ -115,7 +114,7 @@ func calculateProductStockDetails(purchases []Purchase) (float64, int, int) {
 
 	averageBuyPrice := float64(sumTotalPrice / sumNumberReceived)
 
-	return averageBuyPrice, sumNumberReceived, sumNumberOrdered
+	return averageBuyPrice, sumNumberReceived
 }
 
 func (service *Service) processUpdateProductStock(
@@ -129,7 +128,7 @@ func (service *Service) processUpdateProductStock(
 		return err
 	}
 
-	productStockData.AverageBuyPrice, productStockData.Stock, productStockData.TotalOrdered = calculateProductStockDetails(purchasesData)
+	productStockData.AverageBuyPrice, productStockData.Stock = calculateProductStockDetails(purchasesData)
 
 	_, err = service.productStockService.UpdateProductStock(productID, productStockData)
 
