@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/reynaldipane/toko-ijah/order"
 	"github.com/reynaldipane/toko-ijah/product"
 	productstock "github.com/reynaldipane/toko-ijah/product_stock"
 	"github.com/reynaldipane/toko-ijah/purchase"
@@ -20,6 +21,7 @@ func main() {
 	appcontext.GetDB().AutoMigrate(&productstock.ProductStock{})
 	appcontext.GetDB().AutoMigrate(&purchasehistory.PurchaseHistory{})
 	appcontext.GetDB().AutoMigrate(&purchase.Purchase{})
+	appcontext.GetDB().AutoMigrate(&order.Order{})
 
 	router := server.CreateRouter()
 	log.Fatal(http.ListenAndServe(":9000", router))

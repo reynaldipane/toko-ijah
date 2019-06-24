@@ -2,6 +2,7 @@ package server
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/reynaldipane/toko-ijah/order"
 	"github.com/reynaldipane/toko-ijah/product"
 	"github.com/reynaldipane/toko-ijah/purchase"
 )
@@ -16,5 +17,7 @@ func CreateRouter() *mux.Router {
 
 	router.HandleFunc("/purchases", purchase.CreatePurchase).Methods("POST")
 	router.HandleFunc("/purchases/{id}", purchase.UpdatePurchase).Methods("PUT")
+
+	router.HandleFunc("/orders", order.CreateOrder).Methods("POST")
 	return router
 }
